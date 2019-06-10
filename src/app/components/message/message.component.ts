@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit ,Input} from '@angular/core';
+import { chatMessage } from 'src/app/model/chatMessage';
 
 @Component({
   selector: 'app-message',
@@ -6,10 +7,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./message.component.css']
 })
 export class MessageComponent implements OnInit {
-
+@Input() chatMsg:chatMessage
+email:string;
+username:string;
+message:string;
+timesent:string;
   constructor() { }
 
-  ngOnInit() {
+  ngOnInit(chatMsg=this.chatMsg) {
+    this.message=chatMsg.message;
+    this.username=chatMsg.username;
+    this.email=chatMsg.email;
+    this.timesent=chatMsg.timesent;
   }
 
 }

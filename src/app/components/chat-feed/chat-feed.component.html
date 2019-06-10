@@ -1,3 +1,5 @@
-<p>
-  chat-feed works!
-</p>
+<div class="chat-feed-container">
+  <div *ngFor="let message of chats" class="chatMessageWrapper">
+    <app-message [chatMsg]='message'></app-message>
+  </div>
+</div>

@@ -5,7 +5,7 @@ import { ChatRoomComponent } from './app/components/chat-room/chat-room.componen
 
 export const routes: Routes = [
     {path:'login',component:LoginFormComponent},
-    {path:'sigin', component:SiginFormComponent},
+    {path:'signin', component:SiginFormComponent},
     {path:'chat',component:ChatRoomComponent},
     {path:'',redirectTo:'/login',pathMatch:'full'}
 ];
