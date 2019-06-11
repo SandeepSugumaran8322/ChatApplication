@@ -1,11 +1,15 @@
+<div class="header-nav-bar">
+    <app-navbar></app-navbar>
+  </div>
 <div class="mainContent">
   <div class="userListWrapper">
     <app-user-list></app-user-list>
   </div>
-  <div #scroller class="chatFeedWrapper">
-    <app-chat-feed></app-chat-feed>
+  <div  #scroller class="chatFeedWrapper" [scrollTop]="scroller.scrollHeight">
+      <app-chat-feed ></app-chat-feed>
   </div>
 </div>
 <div class="chatFormWrapper">
-  <app-chat-form></app-chat-form>
+    <app-chat-form></app-chat-form>
 </div>
+

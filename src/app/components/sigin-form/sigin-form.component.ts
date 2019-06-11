@@ -6,7 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./sigin-form.component.css']
 })
 export class SiginFormComponent implements OnInit {
-
+username:string
+email:string
+password:string
   constructor() { }
 
   ngOnInit() {

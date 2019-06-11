@@ -41,9 +41,9 @@ export class ChatService {
   public getTimeStamp() {
     const now = new Date();
      const date = now.getUTCFullYear() + "/" + (now.getUTCMonth() + 1) + "/" + now.getUTCDate();
-    const time = now.getUTCHours() + ":" + now.getUTCMinutes() + ":" + now.getUTCMilliseconds();
-    //return new Date(now.getUTCFullYear(),(now.getUTCMonth() + 1),now.getUTCDate(),now.getUTCHours(),now.getUTCMinutes(),now.getUTCMilliseconds())
-    return date+' '+time;
+    const time = now.getHours() + ":" + now.getMinutes() + ":" + now.getMilliseconds();
+    //return new Date(now.getUTCFullYear(),(now.getUTCMonth() + 1),now.getUTCDate(),now.getUTCHours(),now.getUTCMinutes(),now.getUTCMilliseconds()).toLocaleString()
+    return date+" "+time;
   }
 
 getMessages():AngularFireList<chatMessage> {

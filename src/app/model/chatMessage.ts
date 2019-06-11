@@ -3,6 +3,6 @@ export class chatMessage{
     email?:string;
     username?:string;
     message?:string;
-    timesent?:string;
+    timesent?:string
 
 }
