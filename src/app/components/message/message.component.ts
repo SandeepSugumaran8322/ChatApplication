@@ -13,7 +13,7 @@ email:string;
 username:string;
 message:string;
 timesent:string;
-isOwnMail:boolean;
+isOwnMessage:boolean;
 ownMail:string;
   constructor(private authSer:AuthService) {
     authSer.authUser().subscribe((auth)=>{
@@ -21,7 +21,7 @@ ownMail:string;
     })
     console.log(this.ownMail)
     console.log(this.email)
-    console.log(this.isOwnMail=this.ownMail === this.email);
+    console.log(this.isOwnMessage=this.ownMail === this.email);
    }
 
   ngOnInit(chatMsg=this.chatMsg) {
