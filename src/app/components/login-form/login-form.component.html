@@ -10,7 +10,7 @@
               <div class="input-group-prepend">
                 <span class="input-group-text"><i class="fas fa-user"></i></span>
               </div>
-              <input type="text" class="form-control" placeholder="username" maxlength="60" [(ngModel)]="username" name="username" required>
+              <input type="text" class="form-control" placeholder="username" maxlength="60" [(ngModel)]="email" name="email" required>
               
             </div>
             <div class="input-group form-group">
@@ -21,7 +21,7 @@
             </div>
             <div class="form-group">
               <!-- <button type="submit" [disabled]="!loginForm.form.valid"   value="Login" class="btn login_btn"/> -->
-              <button type="Submit" class="btn float-right btn-success" [disabled]="!form.form.valid" >Log In</button>
+              <button type="Submit" class="btn float-right btn-success" [disabled]="!form.form.valid" (click)='login()'>Log In</button>
             </div>
           </form>
         </div>
