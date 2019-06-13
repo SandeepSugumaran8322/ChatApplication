@@ -9,8 +9,8 @@
     box-shadow: 0 3px 6px rgba(0,0,0,0.26), 0 3px 6px rgba(0,0,0,0.23);
 }
 
-.isOwnMessageContainer{
-    background-color: #01579B;
+.isOwnMessageData{
+    background-color: rgb(1, 155, 34);
 }
 
 .messageData{
@@ -25,18 +25,18 @@
     font-weight: bold;
 }
 
-.isOwnSender{
+/* .isOwnSender{
     color: #E1F5FE;
-}
+} */
 
 .timestamp {
     color: #555;
     font-style: italic;
 }
 
-.isOwnTimestamp{
+/* .isOwnTimestamp{
     color: #4FC3F7;
-}
+} */
 
 .messageContent{
     height: auto;
@@ -48,7 +48,7 @@
     overflow-x:auto;
 }
 
-.isOwnMessageContent{
+/* .isOwnMessageContent{
     background-color: #E3F2FD;
     color: #01579B;
-}
+} */

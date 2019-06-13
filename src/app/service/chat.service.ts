@@ -34,8 +34,7 @@ export class ChatService {
   }
   getUsers()
   {
-    const path='/users';
-    return this.db.object(path);
+    return this.db.list('users')
   }
 
 

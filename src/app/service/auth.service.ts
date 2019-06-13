@@ -13,7 +13,7 @@ export class AuthService {
   user: Observable<firebase.User>
   authState: any
   userId: string;
-setUID:Observable<any>
+  setUID:Observable<any>
   constructor(private af: AngularFireAuth, private db: AngularFireDatabase, private router: Router) {
     this.user = af.authState;
   }
@@ -36,16 +36,23 @@ setUID:Observable<any>
     return this.user;
   }
 
-  login(email: string, password: string) {
+ login(email: string, password: string) {
     return this.af.auth.signInWithEmailAndPassword(email, password)
       .then((user) => {
-        this.authState = user;
-        this.setUserStatus('online')
+      // this.authState = user;
+      this.setUserStatus('online')
         this.router.navigate(['chat'])
       });
   }
 
-  setUserStatus(status: string) {
+  public async setUserStatus(status: string) {
+    await this.user.subscribe(auth => {
+      if (auth) {
+        this.userId = auth.uid
+      }
+    })
+    console.log(`User id bro:`)
+    console.log(this.userId);
     const path = `users/${this.userId}`;
     const data = {
       status: status

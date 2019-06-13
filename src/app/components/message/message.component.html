@@ -1,6 +1,6 @@
 <div class='messageContainer'>
-  <div class="messageData">
-    <span class="sender">
+  <div class="messageData" [ngClass]="{'isOwnMessageData':isOwnMessage}">
+    <span class="sender" >
       {{username }}
     </span>
     <span class="timesent">
